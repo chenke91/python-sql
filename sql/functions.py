@@ -41,7 +41,7 @@ __all__ = ['Abs', 'Cbrt', 'Ceil', 'Degrees', 'Div', 'Exp', 'Floor', 'Ln',
     'DateTrunc', 'Extract', 'Isfinite', 'JustifyDays', 'JustifyHours',
     'JustifyInterval', 'Localtime', 'Localtimestamp', 'Now',
     'StatementTimestamp', 'Timeofday', 'TransactionTimestamp',
-    'AtTimeZone']
+    'AtTimeZone', 'Week', 'Month']
 
 # Mathematical
 
@@ -451,6 +451,16 @@ class Timeofday(Function):
 class TransactionTimestamp(Function):
     __slots__ = ()
     _function = 'TRANSACTION_TIMESTAMP'
+    
+    
+class Week(Function):
+    __slots__ = ()
+    _function = 'WEEK'
+
+    
+class Month(Function):
+    __slots__ = ()
+    _function = 'MONTH'
 
 
 class AtTimeZone(Function):
